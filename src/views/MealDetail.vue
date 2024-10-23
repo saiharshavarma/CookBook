@@ -1,8 +1,8 @@
 <template>
-    <div class="mx-auto p-8">
+    <div class="max-w-[800px] mx-auto p-8">
         <div class="flex flex-col justify-center">
             <h1 class="text-5xl text-center font-bold mb-5">{{ meal.strMeal }}</h1>
-            <img :src="meal.strMealThumb" alt="meal.strMeal" />
+            <img :src="meal.strMealThumb" :alt="meal.strMeal" class="max-w-[100%]">
             <div class="grid grid-cols-1 items-center text-center justify-center sm:grid-cols-3 text-lg py-2">
                 <div>
                     <strong class="font-bold">Category:</strong> {{ meal.strCategory }}
@@ -37,7 +37,7 @@
             </div>
             <div class="flex mt-3">
                     <YouTubeButton :href="meal.strYoutube"> Go to YouTube</YouTubeButton>
-                    <a :href="href" target="_blank" class="px-3 ml-5 py-2 rounded border-2 text-white border-blue-600 bg-blue-500 hover:bg-blue-600 transition-colors">Source</a>
+                    <a :href="meal.strSource" target="_blank" class="px-3 ml-5 py-2 rounded border-2 text-white border-blue-600 bg-blue-500 hover:bg-blue-600 transition-colors">Source</a>
             </div>
         </div>
     </div>
